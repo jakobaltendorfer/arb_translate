@@ -5,8 +5,7 @@ List<String> findUntranslatedResourceIds(
   AppResourceBundle templateBundle,
 ) {
   final untranslatedMessageIds = templateBundle.resourceIds.where((id) =>
-      !bundle.resources.containsKey(id) ||
-      (bundle.resources[id] as String).isEmpty);
+      !bundle.resources.containsKey(id));
 
   return untranslatedMessageIds.toList();
 }
